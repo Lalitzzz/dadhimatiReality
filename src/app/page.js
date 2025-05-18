@@ -670,7 +670,7 @@
 "use client"
 import { useEffect } from 'react';
 import Head from 'next/head';
-import PropertyCard from '@/components/PropertyCard';
+import PropertyCard from '@/components/propertyCard';
 
 
 import { motion } from 'framer-motion';
