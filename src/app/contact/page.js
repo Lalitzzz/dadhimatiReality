@@ -72,7 +72,7 @@ export default function Contact() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="mt-6 max-w-xl mx-auto text-xl text-blue-700/90"
             >
-              We'd love to hear from you. Drop us a message!
+              We&#39;d love to hear from you. Drop us a message!
             </motion.p>
             
             <motion.div 
