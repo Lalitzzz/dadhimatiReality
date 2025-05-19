@@ -912,12 +912,12 @@ export default function Home() {
           <h2 className="text-4xl font-extrabold text-blue-800 mb-2">Jaipur Development Authority</h2>
           <p className="text-blue-600 font-semibold">Near Jagatpura, Jaipur’s Prime Location</p>
           <p className="text-lg font-medium text-gray-700 mt-2">
-            "Jaipur's New Economic Hub" located on Ring Road
-          </p>
+  &quot;Jaipur&apos;s New Economic Hub&quot; located on Ring Road
+</p>
           <h3 className="text-2xl font-bold text-blue-700 mt-4">Commercial Plots</h3>
           <p className="text-md font-medium text-gray-600 mt-2">
-            A golden opportunity to buy plots at a low budget in "today's time"
-          </p>
+  A golden opportunity to buy plots at a low budget in &quot;today&apos;s time&quot;
+</p>
         </div>
 
         {/* Info Cards */}
@@ -1453,10 +1453,11 @@ export default function Home() {
                   </div>
                 </div>
                 <blockquote className="mt-6 text-gray-600 italic relative">
-                  <div className="absolute top-0 left-0 text-6xl text-blue-100 font-serif leading-none -mt-2">"</div>
-                  <p className="relative z-10 pl-6">{testimonial.quote}</p>
-                  <div className="absolute bottom-0 right-0 text-6xl text-blue-100 font-serif leading-none -mb-4">"</div>
-                </blockquote>
+  <div className="absolute top-0 left-0 text-6xl text-blue-100 font-serif leading-none -mt-2">&quot;</div>
+  <p className="relative z-10 pl-6">{testimonial.quote}</p>
+  <div className="absolute bottom-0 right-0 text-6xl text-blue-100 font-serif leading-none -mb-4">&quot;</div>
+</blockquote>
+
               </motion.div>
             ))}
           </motion.div>

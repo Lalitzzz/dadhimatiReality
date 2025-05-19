@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function AboutPage() {
   return (
@@ -13,10 +14,13 @@ export default function AboutPage() {
         {/* Hero Section */}
         <div className="relative bg-gradient-to-r from-blue-900 to-blue-700">
           <div className="absolute inset-0 bg-opacity-75">
-            <img
+            <Image
               className="w-full h-full object-cover"
               src="/images/lala.jpg"
               alt="About our land services"
+              width={1920}
+              height={1080}
+              priority
             />
           </div>
           <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center">
@@ -44,7 +48,7 @@ export default function AboutPage() {
                   could build their dream homes without compromising on quality or legal security.
                 </p>
                 <p>
-                  We started with just a handful of JDA-approved plots in prime locations, and today we're proud to be 
+                  We started with just a handful of JDA-approved plots in prime locations, and today we&apos;re proud to be 
                   one of the most trusted names in residential and commercial land development across the region.
                 </p>
                 <p>
@@ -54,10 +58,12 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="mt-12 lg:mt-0">
-              <img
+              <Image
                 className="w-full rounded-lg shadow-xl"
                 src="/images/plottt.jpg"
                 alt="Our team working on land projects"
+                width={800}
+                height={600}
               />
             </div>
           </div>
@@ -68,10 +74,12 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
               <div className="order-last lg:order-first">
-                <img
+                <Image
                   className="w-full rounded-lg shadow-xl"
                   src="/images/bigiee.jpg"
                   alt="Land development process"
+                  width={800}
+                  height={600}
                 />
               </div>
               <div className="mt-12 lg:mt-0">
@@ -81,7 +89,7 @@ export default function AboutPage() {
                 </h2>
                 <div className="mt-6 space-y-6 text-gray-600">
                   <p>
-                    We believe land is more than just a commodity - it's the foundation for dreams, businesses, 
+                    We believe land is more than just a commodity - it&apos;s the foundation for dreams, businesses, 
                     and communities. Our mission is to bridge the gap between landowners and aspiring homeowners 
                     through fair deals and ethical practices.
                   </p>
@@ -172,10 +180,12 @@ export default function AboutPage() {
 
             <div className="mt-12 grid gap-8 md:grid-cols-3">
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <img
+                <Image
                   className="mx-auto h-40 w-40 rounded-full object-cover"
                   src="/images/bhind.jpg"
                   alt="Land acquisition specialist"
+                  width={160}
+                  height={160}
                 />
                 <h3 className="mt-4 text-xl font-bold text-gray-900">Mahendra Sharma</h3>
                 <p className="text-blue-600">Land Acquisition Head</p>
@@ -184,10 +194,12 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <img
+                <Image
                   className="mx-auto h-40 w-40 rounded-full object-cover"
                   src="/images/BHAGWATI.jpg"
                   alt="Legal expert"
+                  width={160}
+                  height={160}
                 />
                 <h3 className="mt-4 text-xl font-bold text-gray-900">Bhagwati</h3>
                 <p className="text-blue-600">Legal & Compliance</p>
@@ -196,12 +208,14 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <img
+                <Image
                   className="mx-auto h-40 w-40 rounded-full object-cover"
                   src="/images/cutomerthree.jpg"
                   alt="Customer relations"
+                  width={160}
+                  height={160}
                 />
-                <h3 className="mt-4 text-xl font-bold text-gray-900">Mukesh  Vaishnav</h3>
+                <h3 className="mt-4 text-xl font-bold text-gray-900">Mukesh Vaishnav</h3>
                 <p className="text-blue-600">Customer Relations</p>
                 <p className="mt-2 text-gray-600">
                   Guides you through every step of your land purchase journey with transparency.

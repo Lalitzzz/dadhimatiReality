@@ -74,8 +74,8 @@ export default function Testimonials() {
       <div className="mt-16 text-center">
         <h3 className="text-xl font-semibold text-gray-900">Ready to share your experience?</h3>
         <p className="mt-4 text-gray-600">
-          We'd love to hear about your journey with LuxuryHomes.
-        </p>
+  We&apos;d love to hear about your journey with LuxuryHomes.
+</p>
         <div className="mt-6">
           <Link href="/contact" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
             Leave a Review

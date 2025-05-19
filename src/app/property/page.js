@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { FaMapMarkerAlt, FaRulerCombined, FaMoneyBillWave, FaFileSignature, FaTree, FaRoad, FaPhone, FaEnvelope } from 'react-icons/fa'
 
 export default function PropertyDetail() {
@@ -81,18 +82,27 @@ export default function PropertyDetail() {
             {/* Image Gallery */}
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="sm:col-span-2">
-                <img
+                {/* <img
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                   src={property.images[0]}
                   alt="Main plot view"
+                /> */}
+                <Image
+                  src={property.images[0]}
+                  alt="Main plot view"
+                  width={800}   // adjust as needed
+                  height={384}  // equivalent to h-96 (96 × 4 = 384px)
+                  className="w-full object-cover rounded-lg shadow-lg"
                 />
               </div>
               {property.images.slice(1).map((image, index) => (
                 <div key={index}>
-                  <img
-                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  <Image
                     src={image}
                     alt={`Plot view ${index + 1}`}
+                    width={800} // adjust as needed
+                    height={192} // 48 * 4 = 192px (tailwind h-48)
+                    className="object-cover rounded-lg"
                   />
                 </div>
               ))}
@@ -310,9 +320,9 @@ export default function PropertyDetail() {
             <div>
               <h3 className="text-lg font-bold mb-4">Newsletter</h3>
               <div className="flex">
-                <input 
-                  type="email" 
-                  placeholder="Your email" 
+                <input
+                  type="email"
+                  placeholder="Your email"
                   className="px-4 py-2 rounded-l-md w-full text-gray-900 focus:outline-none"
                 />
                 <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md">

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Services() {
   const services = [
@@ -109,7 +110,7 @@ export default function Services() {
         "Nearby School",
         "Best Development"
       ],
-      highlight: "Don't miss healthy lifestyle. It pays off.",
+      highlight: "Don&apos;t miss healthy lifestyle. It pays off.",
       image: "/images/samurai.png"
     },
     {
@@ -147,10 +148,12 @@ export default function Services() {
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-blue-900 to-blue-700">
         <div className="absolute inset-0 bg-opacity-75">
-          <img
+          <Image
             className="w-full h-full object-cover mix-blend-overlay"
             src="/images/land-services-hero.jpg"
             alt="Land development services"
+            fill
+            priority
           />
         </div>
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center">
@@ -158,7 +161,7 @@ export default function Services() {
             Land & Plot Services
           </h1>
           <p className="mt-6 text-xl text-blue-100 max-w-3xl mx-auto">
-            Premium land acquisition and development services across Jaipur's most promising locations
+            Premium land acquisition and development services across Jaipur&apos;s most promising locations
           </p>
         </div>
       </div>
@@ -181,10 +184,11 @@ export default function Services() {
             <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}>
               <div className="md:w-1/2">
                 <div className="relative rounded-xl overflow-hidden shadow-xl h-96 w-full">
-                  <img
+                  <Image
                     className="w-full h-full object-cover"
                     src={project.image}
                     alt={project.name}
+                    fill
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-6 text-white">
@@ -262,7 +266,7 @@ export default function Services() {
             </h2>
             <div className="mt-3 mx-auto w-24 border-b-4 border-blue-200"></div>
             <p className="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
-              JDA and society approved plots in Jaipur's most promising areas
+              JDA and society approved plots in Jaipur&apos;s most promising areas
             </p>
           </div>
 
@@ -271,10 +275,11 @@ export default function Services() {
               <div key={index} className="group relative bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 {/* Image with overlay */}
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <Image
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     src={location.image}
                     alt={location.name}
+                    fill
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-4 w-full">
@@ -318,7 +323,7 @@ export default function Services() {
               </h2>
               <p className="mt-4 text-xl text-blue-200">WHERE STRENGTH MEETS COMMUNITY</p>
               <p className="mt-6 text-gray-300">
-                Don't miss healthy lifestyle. It pays off. Our premium residential townships come with state-of-the-art fitness facilities to keep you and your family active and healthy.
+                Don&apos;t miss healthy lifestyle. It pays off. Our premium residential townships come with state-of-the-art fitness facilities to keep you and your family active and healthy.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <div className="bg-gray-800 p-4 rounded-lg">
@@ -332,11 +337,14 @@ export default function Services() {
               </div>
             </div>
             <div className="mt-12 lg:mt-0">
-              <img
-                className="w-full rounded-lg shadow-xl"
-                src="/images/jym2.jpg"
-                alt="KP Balaji Gymnasium"
-              />
+              <div className="relative rounded-lg shadow-xl w-full h-96">
+                <Image
+                  className="w-full h-full object-cover"
+                  src="/images/jym2.jpg"
+                  alt="KP Balaji Gymnasium"
+                  fill
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -393,11 +401,14 @@ export default function Services() {
             </div>
           </div>
           <div className="mt-12 lg:mt-0">
-            <img
-              className="w-full rounded-lg shadow-xl"
-              src="/images/plotttt.jpg"
-              alt="Land expertise"
-            />
+            <div className="relative rounded-lg shadow-xl w-full h-96">
+              <Image
+                className="w-full h-full object-cover"
+                src="/images/plotttt.jpg"
+                alt="Land expertise"
+                fill
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -407,11 +418,14 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             <div className="order-2 lg:order-1 mt-12 lg:mt-0">
-              <img
-                className="w-full rounded-lg shadow-xl"
-                src="/images/wedone.jpg"
-                alt="SEZ Investment"
-              />
+              <div className="relative rounded-lg shadow-xl w-full h-96">
+                <Image
+                  className="w-full h-full object-cover"
+                  src="/images/wedone.jpg"
+                  alt="SEZ Investment"
+                  fill
+                />
+              </div>
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="text-3xl font-extrabold sm:text-4xl">
@@ -467,4 +481,4 @@ export default function Services() {
       </div>
     </div>
   )
-} 
+}

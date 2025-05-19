@@ -29,9 +29,10 @@ export default function TestimonialCard({ testimonial }) {
       <div className="mt-4 flex">
         {renderStars()}
       </div>
-      <blockquote className="mt-4 text-gray-600">
-        <p>"{testimonial.content}"</p>
-      </blockquote>
+     <blockquote className="mt-4 text-gray-600">
+  <p>{testimonial.content}</p>
+</blockquote>
+
     </div>
   )
 }
