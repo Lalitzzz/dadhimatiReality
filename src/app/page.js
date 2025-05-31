@@ -7,6 +7,7 @@ import PropertyCard from '@/components/propertyCard';
 import { motion } from 'framer-motion';
 import { PhoneCall } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
+import Link from 'next/link';
 
 
 const blobAnimation = {
@@ -172,54 +173,54 @@ export default function Home() {
         </div>
       </div>
 
-     <section className="py-12 px-4 bg-gradient-to-b from-blue-50 to-blue-100 relative overflow-hidden">
-  {/* Decorative cloud elements */}
-  <div className="absolute top-10 left-10 w-24 h-16 bg-white rounded-full opacity-30"></div>
-  <div className="absolute top-20 right-20 w-32 h-20 bg-white rounded-full opacity-40"></div>
-  <div className="absolute bottom-20 left-1/4 w-40 h-24 bg-white rounded-full opacity-30"></div>
-  
-  <div className="max-w-4xl mx-auto relative z-10">
-    {/* Section Header */}
-    <div className="text-center mb-8">
-      <h2 className="text-2xl md:text-3xl font-bold text-blue-900">
-        Our Property Showcase
-      </h2>
-      <p className="mt-2 text-blue-800 md:text-lg">
-        Watch our latest property listings in this short preview
-      </p>
-    </div>
+      <section className="py-12 px-4 bg-gradient-to-b from-blue-50 to-blue-100 relative overflow-hidden">
+        {/* Decorative cloud elements */}
+        <div className="absolute top-10 left-10 w-24 h-16 bg-white rounded-full opacity-30"></div>
+        <div className="absolute top-20 right-20 w-32 h-20 bg-white rounded-full opacity-40"></div>
+        <div className="absolute bottom-20 left-1/4 w-40 h-24 bg-white rounded-full opacity-30"></div>
 
-    {/* YouTube Shorts Player - Enhanced */}
-    <div className="flex justify-center">
-      <div className="w-full max-w-[350px] sm:max-w-[400px] md:max-w-[450px] transform transition-all hover:scale-[1.02] hover:shadow-2xl">
-        <div className="relative pb-[177.78%] h-0 overflow-hidden rounded-2xl shadow-xl border-4 border-white bg-white">
-          <iframe
-            className="absolute top-0 left-0 w-full h-full"
-            src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&playsinline=1&autoplay=1&loop=1&mute=1`}
-            title="Property Shorts Preview"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-          <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 to-transparent pointer-events-none"></div>
+        <div className="max-w-4xl mx-auto relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900">
+              Our Property Showcase
+            </h2>
+            <p className="mt-2 text-blue-800 md:text-lg">
+              Watch our latest property listings in this short preview
+            </p>
+          </div>
+
+          {/* YouTube Shorts Player - Enhanced */}
+          <div className="flex justify-center">
+            <div className="w-full max-w-[350px] sm:max-w-[400px] md:max-w-[450px] transform transition-all hover:scale-[1.02] hover:shadow-2xl">
+              <div className="relative pb-[177.78%] h-0 overflow-hidden rounded-2xl shadow-xl border-4 border-white bg-white">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&playsinline=1&autoplay=1&loop=1&mute=1`}
+                  title="Property Shorts Preview"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 to-transparent pointer-events-none"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Property Description */}
+          <div className="mt-8 text-center max-w-2xl mx-auto bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md border border-white">
+            <h3 className="text-xl font-semibold text-blue-900">
+              Premium Plots Available Now
+            </h3>
+            <p className="mt-3 text-blue-800">
+              This short video shows our featured properties. Contact us for site visits and investment opportunities.
+            </p>
+            <button className="mt-6 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-lg hover:from-blue-600 hover:to-blue-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              Get Property Details
+            </button>
+          </div>
         </div>
-      </div>
-    </div>
-
-    {/* Property Description */}
-    <div className="mt-8 text-center max-w-2xl mx-auto bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md border border-white">
-      <h3 className="text-xl font-semibold text-blue-900">
-        Premium Plots Available Now
-      </h3>
-      <p className="mt-3 text-blue-800">
-        This short video shows our featured properties. Contact us for site visits and investment opportunities.
-      </p>
-      <button className="mt-6 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-lg hover:from-blue-600 hover:to-blue-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-        Get Property Details
-      </button>
-    </div>
-  </div>
-</section>
+      </section>
 
 
       <div className="relative min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-200 py-16 px-4 overflow-hidden">
@@ -837,34 +838,40 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <motion.a
+              <motion.div
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 10px 25px -5px rgba(255, 255, 255, 0.2)"
                 }}
                 whileTap={{ scale: 0.98 }}
-                href="#contact"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-lg font-semibold rounded-lg text-white bg-transparent hover:bg-white/10 transition-all duration-300"
               >
-                Contact Our Land Team
-                <svg className="ml-3 -mr-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                </svg>
-              </motion.a>
-              <motion.a
+                <Link
+                  href="/contact"  // Change this to your desired path
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-lg font-semibold rounded-lg text-white bg-transparent hover:bg-white/10 transition-all duration-300"
+                >
+                  Contact Our Land Team
+                  <svg className="ml-3 -mr-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                </Link>
+              </motion.div>
+              <motion.div
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 10px 25px -5px rgba(234, 179, 8, 0.4)"
                 }}
                 whileTap={{ scale: 0.98 }}
-                href="/properties"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-transparent text-lg font-semibold rounded-lg text-blue-800 bg-yellow-400 hover:bg-yellow-300 transition-all duration-300"
               >
-                View Available Land
-                <svg className="ml-3 -mr-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </motion.a>
+                <Link
+                  href="/property"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-transparent text-lg font-semibold rounded-lg text-blue-800 bg-yellow-400 hover:bg-yellow-300 transition-all duration-300"
+                >
+                  View Available Land
+                  <svg className="ml-3 -mr-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </Link>
+              </motion.div>
             </motion.div>
           </div>
         </div>

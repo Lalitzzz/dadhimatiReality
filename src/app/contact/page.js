@@ -151,7 +151,7 @@ export default function Contact() {
               
               <div className="space-y-8 relative z-10">
                 {[
-                  { icon: <FaPhone />, title: "Phone", content: "+91 98765 43210" },
+                  { icon: <FaPhone />, title: "Phone", content: "+91 8560980604" },
                   { icon: <FaEnvelope />, title: "Email", content: "Mahendradadhich6662@gmail.com" },
                   { 
                     icon: <FaMapMarkerAlt />, 
