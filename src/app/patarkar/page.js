@@ -31,7 +31,7 @@ export default function PropertyListing() {
       url: '/images/nava8.jpg',
       alt: 'Backyard with seating area and well-maintained garden'
     },
-    
+
     // Living Areas (3 images)
     {
       id: 4,
@@ -48,7 +48,7 @@ export default function PropertyListing() {
       url: '/images/nava11.jpg',
       alt: 'Elegant dining area with 8-seater table and chandelier'
     },
-    
+
     // Kitchen (2 images)
     {
       id: 7,
@@ -60,7 +60,7 @@ export default function PropertyListing() {
       url: '/images/nava13.jpg',
       alt: 'Kitchen storage spaces and cooking area'
     },
-    
+
     // Bedrooms (4 images)
     {
       id: 9,
@@ -82,7 +82,7 @@ export default function PropertyListing() {
       url: '/images/nava17.jpg',
       alt: 'Third bedroom with study table and ample natural light'
     },
-    
+
     // Outdoor (3 images)
     {
       id: 13,
@@ -131,8 +131,8 @@ export default function PropertyListing() {
       {/* Hero Section */}
       <div className="relative bg-blue-900">
         <div className="absolute inset-0 bg-blue-800 opacity-90"></div>
-        <img 
-          src={propertyImages[0].url} 
+        <img
+          src={propertyImages[0].url}
           alt={propertyImages[0].alt}
           className="absolute inset-0 w-full h-full object-cover opacity-70"
         />
@@ -143,7 +143,7 @@ export default function PropertyListing() {
           <p className="mt-6 text-xl text-blue-100 max-w-3xl">
             Spacious 2 BHK villa with modern amenities, located in the heart of the city. Priced between ₹80 Lakh - ₹1 Crore.
           </p>
-          <button 
+          <button
             onClick={() => setShowEnquiryForm(true)}
             className="mt-8 bg-white hover:bg-blue-50 text-blue-700 font-bold py-3 px-8 rounded-lg text-lg transition duration-300 shadow-lg"
           >
@@ -156,8 +156,8 @@ export default function PropertyListing() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Featured Image */}
         <div className="mb-8 rounded-xl overflow-hidden shadow-xl border-4 border-white">
-          <img 
-            src={propertyImages[activeImage].url} 
+          <img
+            src={propertyImages[activeImage].url}
             alt={propertyImages[activeImage].alt}
             className="w-full h-96 object-cover"
           />
@@ -169,13 +169,13 @@ export default function PropertyListing() {
         {/* Image Thumbnails */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-12">
           {propertyImages.map((image, index) => (
-            <div 
+            <div
               key={image.id}
               onClick={() => setActiveImage(index)}
               className={`cursor-pointer rounded-lg overflow-hidden shadow-md transition-all duration-200 ${activeImage === index ? 'ring-4 ring-blue-500 scale-105' : 'hover:scale-105'}`}
             >
-              <img 
-                src={image.url} 
+              <img
+                src={image.url}
                 alt={image.alt}
                 className="w-full h-32 object-cover"
               />
@@ -194,7 +194,7 @@ export default function PropertyListing() {
               <p className="text-gray-700 mb-6">
                 This exquisite 2 BHK villa in Patarkar Colony offers a perfect blend of luxury and comfort. Spread across 3000 sq.ft., the property features premium finishes and thoughtful design throughout.
               </p>
-              
+
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-blue-800 mb-3">Key Features</h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -331,7 +331,7 @@ export default function PropertyListing() {
                 <p className="text-gray-700">2 (Ground + 1)</p>
               </div>
             </div>
-            <button 
+            <button
               onClick={() => setShowEnquiryForm(true)}
               className="mt-2 w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300 shadow-md"
             >
@@ -375,8 +375,9 @@ export default function PropertyListing() {
                 </div>
               </div>
               <p className="text-gray-700">
-                "Patarkar Colony offers the perfect blend of tranquility and convenience. The community is wonderful and the location can't be beat - just 10 minutes from the business district but feels like a retreat."
+                &quot;Patarkar Colony offers the perfect blend of tranquility and convenience. The community is wonderful and the location can&apos;t be beat - just 10 minutes from the business district but feels like a retreat.&quot;
               </p>
+
               <div className="mt-4 flex">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -394,8 +395,9 @@ export default function PropertyListing() {
                 </div>
               </div>
               <p className="text-gray-700">
-                "We've lived here for 5 years and couldn't be happier. The security is excellent, maintenance is prompt, and our children love the park nearby. Property values have appreciated nearly 40% since we bought."
+                {"We've lived here for 5 years and couldn't be happier. The security is excellent, maintenance is prompt, and our children love the park nearby. Property values have appreciated nearly 40% since we bought."}
               </p>
+
               <div className="mt-4 flex">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -413,8 +415,9 @@ export default function PropertyListing() {
                 </div>
               </div>
               <p className="text-gray-700">
-                "As an investor, I've seen properties in Patarkar Colony appreciate significantly. The infrastructure development in the area makes it one of the best long-term investment opportunities in the city."
+                {"As an investor, I've seen properties in Patarkar Colony appreciate significantly. The infrastructure development in the area makes it one of the best long-term investment opportunities in the city."}
               </p>
+
               <div className="mt-4 flex">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -431,7 +434,7 @@ export default function PropertyListing() {
       {showEnquiryForm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-xl max-w-md w-full p-6 relative border-2 border-blue-200 shadow-2xl">
-            <button 
+            <button
               onClick={() => setShowEnquiryForm(false)}
               className="absolute top-4 right-4 text-blue-500 hover:text-blue-700"
             >
@@ -441,7 +444,10 @@ export default function PropertyListing() {
             </button>
             <div className="bg-blue-700 text-white p-4 rounded-t-lg -m-6 mb-6">
               <h3 className="text-2xl font-bold">Enquire About This Villa</h3>
-              <p className="text-blue-100">We'll get back to you within 24 hours</p>
+              <p className="text-blue-100">
+                {"Thank you for reaching out! We’ll get back to you within 24 hours."}
+              </p>
+
             </div>
             <form onSubmit={handleSubmit}>
               <div className="space-y-4">
